@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <title>Subscriptor</title>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Recommended shim for cross-browser WebRTC support. -->
+    <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
+    <!-- Default Red5 Pro Playback Control styles. -->
+    <link href="lib/red5pro/red5pro-media.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <h1>Subscriptor</h1>
+    <div class="alert alert-primary" role="alert">
+      <h4>Host:</h4> <div id="localhost"></div>
+    </div>
+    
+    <div class="card" style="width: 32rem;">
+    <video id="red5pro-subscriber"
+           class="red5pro-media red5pro-media-background"
+           autoplay controls>
+    </video>
+  </div>
+</div>
+    <!-- Exposes `red5prosdk` on the window global. -->
+    <script src="lib/red5pro/red5pro-sdk.min.js"></script>
+    <!-- Example script below. -->
+    <script src="lib/main-publisher.js"></script>
+  </body>
+</html>
