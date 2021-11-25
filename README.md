@@ -13,6 +13,16 @@ Por otro lado el subscritor, tambien solicitará la ip del servidor de la instan
 ## Instrucciones
 Ejecute el archivo _server.bat_ para desplegar un servidor web simple en python, después desde el index ingrese al publicador e indique el host. Luego, tambien desde el index, abra el subscriptor e indique el host.
 
+Si no se inicia el servidor web de python usando _server.bat_:
+
+    python -m http.server 8000
+
+intente con:
+
+    python -m SimpleHTTPServer 8000
+
+
+
 ## Tecnologías
 1. [Red 5 Pro v9](https://www.red5pro.com/docs/server/quickstart/serverinstall/)
 2. [SDK WebRTC](https://github.com/red5pro/red5pro-webrtc-sdk.git)
