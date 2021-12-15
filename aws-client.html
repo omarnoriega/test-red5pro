@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <title>Subscriptor</title>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!-- JS. -->
+    <script src="https://player.live-video.net/1.5.0/amazon-ivs-player.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container-lg">
+    <h1>Subscriptor</h1>
+    <div class="alert alert-primary" role="alert">
+      <h4>Host:</h4> <div id="localhost">AWS.com</div>
+    </div>
+    <div>
+      <video id="video-player" playsinline></video>
+      <script>
+        var PLAYBACK_URL ="https://f461e21eaa92.us-east-1.playback.live-video.net/api/video/v1/us-east-1.655639045905.channel.SNu2gaBQHwBi.m3u8"
+        if (IVSPlayer.isPlayerSupported) {
+          const player = IVSPlayer.create();
+          player.attachHTMLVideoElement(document.getElementById('video-player'));
+          player.load(PLAYBACK_URL);
+          player.play();
+        }
+      </script>
+    </div>
+
+    <div class="cleanslate w24tz-current-time w24tz-middle" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Bogot%C3%A1/hora" style="text-decoration: none" class="clock24" id="tz24-1637883462-c141-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMSIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjFhMDFlNDZmMDcyYSIsInR5cGUiOiJkYiIsImxhbmciOiJlcyJ9" title="Bogotá reloj mundial" target="_blank">Bogota</a></p><div id="clock_block_cb61a01e46f072a"></div></div>
+    <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+
+  </div>
+  </body>
+</html>
